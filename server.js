@@ -8,11 +8,13 @@ var server = require('net'),
     redis = require('redis'),
     valid = require('validator');
 
+var settings = JSON.parse(fs.readFileSync('/home/ubuntu/web_apps/CORE/apps.json'));
+var port = settings['newsletter.com'].port
+
 var SECRET =JSON.parse(fs.readFileSync(__dirname+'/secret.json'));
 var sendgrid  = require('sendgrid')(SECRET.email.username, SECRET.email.password);
-store = redis.createClient('6379', 'localhost');
+store = redis.createClient(settings.services.redis, 'localhost');
 
-var port = 9000;
 var express = require("express");
 
 var app = express();
@@ -214,7 +216,7 @@ var Serv = {
             s({
               to:       emails[i],
               from:     'AMPLabnewsletter@gmail.com',
-              subject:  subject,
+              subject: '[AMP Lab Newsletter] '+ subject,
               html:     body
             });
     }
