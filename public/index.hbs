@@ -1,0 +1,54 @@
+
+
+<h1> AMP Lab Newsletter Listserv </h1>
+<div class="colLeft">
+    Recipients
+    <div id="recipients">
+        <input type="text" id="newemail" class="form-control short" >
+        <div id="emailerror" class="error"></div>
+        <button class="btn btn-success" id="addemail">Add</button>
+        <a href="/download" target="_blank">Download backup</a>
+        <div id="emailpool">
+        {{#each emails}}
+            <div class="emailnode">
+                <a href="mailto:{{this}}">{{this}}</a>
+                <span class="killemail">x</span>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+
+</div>
+
+
+<div class="main">
+    <p>Subject</p>
+    <input class="form-control medium" type="text" id="subject" >
+    <div id="navbarcontainer">
+        <p>Navbar</p>
+        <textarea class="form-control" id="navbar"></textarea>
+    </div>
+    <div id="bodycontainer">
+        <p>Body</p>
+        <textarea class="form-control" id="body"></textarea>
+    </div>
+</div>
+
+<div id="preview" class="main">
+    <h1>Preview</h1>
+    <button class="btn btn-primary" id="refresh">Refresh</button>
+    <div id="pcontainer">
+        <iframe src="/preview" class="main" >
+            
+        </iframe>
+    </div>
+</div>
+
+<div id="sending">
+    
+    Send to test email only ? <input type="checkbox" id="test" class=" form-control">
+    <input type="text" placeholder="test email" id="testemail" class="short form-control">
+        <button class="btn btn-success" id="send">Send</button>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>

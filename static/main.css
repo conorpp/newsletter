@@ -1,0 +1,49 @@
+
+
+#login{
+    width:50%;
+    margin-left: 10%;
+}
+
+.main-center{
+    margin-left: 6%;
+}
+.short{
+    width:200px;
+}
+.medium{
+    max-width:400px;
+}
+.colLeft{
+    float: right;
+    margin-right: 8%;
+}
+.main{
+    width:60%;
+}
+.killemail{
+    color:#810000;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+.killemail:hover{
+    color:red;
+}
+.error{color:red;}
+
+#navbarcontainer{
+    width:20%;
+    display: inline-block;
+}
+#bodycontainer{float:right;width:70%;display: inline-block; main}
+
+#navbar,#body{min-height: 300px; display: inline-block;}
+
+iframe,#preview{width:100%;height:600px;}
+
+#sending{margin-top: 120px;}
+#test{display: inline-block;
+    width:25px;
+    height: 25px;
+}
